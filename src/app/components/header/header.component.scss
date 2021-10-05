@@ -1,0 +1,29 @@
+@import '../../../mixins';
+
+.header {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0 56px;
+  height: 80px;
+  transition: 0.1s all linear;
+
+  @include screen(mobile, 'max') {
+    padding: 0 16px;
+    height: 56px;
+  }
+
+  .header-logo {
+    transition: 0.1s all linear;
+
+    @include screen(mobile, 'max') {
+      width: 75px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<div class="monthly-deposits">
+  <span>Monthly total</span>
+  <span>{{ total / (date | differenceInMonths) | currency: 'USD':'symbol':'1.0-0' }}</span>
+</div>
+
+<div class="monthly-deposits-help-text">
+  <p>
+    You're planning
+    <strong>{{ date | differenceInMonths }} {{ (date | differenceInMonths) > 1 ? 'monthly deposits' : 'deposit' }}</strong> to reach your
+    <strong>{{ total | currency: 'USD':'symbol':'1.0-0' }}</strong>
+    goal by<strong>{{ date | date: 'MMMM y' }}.</strong>
+  </p>
+</div>

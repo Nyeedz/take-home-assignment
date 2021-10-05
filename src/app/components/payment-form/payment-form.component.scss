@@ -1,0 +1,90 @@
+@import '../../../mixins.scss';
+
+:host {
+  margin-bottom: 24px;
+  display: block;
+}
+
+form {
+  display: flex;
+  gap: 16px;
+
+  @include screen(mobile, 'max') {
+    flex-wrap: wrap;
+  }
+
+  .form {
+    display: inline-flex;
+    flex-direction: column;
+    flex: 1;
+
+    &:first-child {
+      @include screen(mobile, 'max') {
+        min-width: 100%;
+      }
+
+      min-width: 272px;
+    }
+
+    @include screen(mobile, 'max') {
+      width: 100%;
+    }
+
+    &-prefix {
+      margin-right: 8px;
+    }
+
+    &-label {
+      font-size: 14px;
+      line-height: 21px;
+      color: #1e2a32;
+      margin-bottom: 4px;
+
+      @include screen(mobile, 'max') {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    &-input {
+      display: inline-flex;
+      border: 1px solid #e9eef2;
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding: 13px 11px;
+      height: 56px;
+
+      &--no-padding {
+        padding: 0;
+      }
+
+      > input[type='text'] {
+        border: none;
+        font-family: Rubik;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: #4d6475;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0;
+        margin-bottom: -2px;
+
+        @include screen(mobile, 'max') {
+          font-size: 20px;
+          line-height: 24px;
+        }
+
+        &::placeholder {
+          opacity: 0.6;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

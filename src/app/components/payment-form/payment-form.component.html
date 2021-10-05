@@ -1,0 +1,16 @@
+<form>
+  <div class="form">
+    <span class="form-label">Total total</span>
+    <div class="form-input">
+      <img class="form--prefix" src="assets/dollar-sign.svg" alt="" />
+      <input type="text" placeholder="25,000" mask="separator.2" name="total" thousandSeparator="," [(ngModel)]="total" />
+    </div>
+  </div>
+
+  <div class="form">
+    <span class="form-label">Reach goal by</span>
+    <div class="form-input form-input --no-padding">
+      <month-input [(ngModel)]="date" name="date"></month-input>
+    </div>
+  </div>
+</form>

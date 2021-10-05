@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=Work+Sans:wght@300;400;500&display=swap");
+@import './variables';
+
+body {
+  margin: 0;
+  background-color: #f4f8fa;
+  font-family: Work Sans;
+  font-weight: 400;
+}
+
+.payment-button {
+  border-radius: 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 54px;
+  text-align: center;
+  border: none;
+  min-width: 150px;
+  font-family: Work Sans;
+  transition: 0.1s background-color linear;
+  cursor: pointer;
+
+  &.payment-primary {
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  &.payment-secondary {
+    background-color: $secondary-color;
+    color: white;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+}

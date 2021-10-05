@@ -1,0 +1,78 @@
+@import '../../../mixins.scss';
+
+:host {
+  outline: none;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.input {
+  &-action {
+    max-width: 50px;
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    transition: 0.1s all linear;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+
+    &:first-child {
+      border-radius: 3px 0 0 3px;
+    }
+
+    &:last-child {
+      border-radius: 0 3px 3px 0;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: rgb(203, 213, 220, 0.1);
+
+      > image {
+        filter: brightness(0);
+      }
+    }
+
+    &:hover {
+      background-color: rgb(203, 213, 220, 0.3);
+      cursor: pointer;
+    }
+
+    .caret-right {
+      transform: rotate(180deg) translateX(-2px);
+    }
+
+    .caret-left {
+      transform: translateX(-2px);
+    }
+  }
+
+  &-date {
+    display: flex;
+    text-align: center;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+
+    span {
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      color: rgb(112, 135, 151);
+
+      @include screen(mobile, 'max') {
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      &:first-child {
+        color: #1e2a32;
+        font-weight: 600;
+      }
+    }
+  }
+}

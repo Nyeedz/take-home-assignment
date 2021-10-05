@@ -1,0 +1,19 @@
+<header></header>
+<div class="container">
+  <h1 class="title">Let's plan your <strong>saving goal.</strong></h1>
+  <payment-card class="card">
+    <div class="card-header">
+      <img src="assets/buy-a-house.svg" alt="Buy a house icon" />
+      <h2 class="card-title">Buy a house</h2>
+      <h3 class="card-subtitle">Saving goal</h3>
+    </div>
+
+    <payment-form #paymentForm></payment-form>
+
+    <planning-deposit [total]="paymentForm.total" [date]="paymentForm.date"></planning-deposit>
+
+    <div class="card-action">
+      <button payment-button>Confirm</button>
+    </div>
+  </payment-card>
+</div>
